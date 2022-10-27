@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 export const ProductScreen: React.FC = () => {
   return (
     <View>
-        <Text>ProductScreen</Text>
+      <Text>ProductScreen</Text>
     </View>
   );
 };
