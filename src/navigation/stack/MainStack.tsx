@@ -9,7 +9,7 @@ export const MainStack: React.FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home"
+        name="MainScreen"
         component={MainScreen}
         options={{ headerShown: false }}
       />

@@ -1,42 +1,28 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true
-  },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
-  ],
-  overrides: [
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json']
-  },
-  plugins: [
-    'react'
   ],
   rules: {
-    indent: [
-      'error',
-      2
-    ],
-    'linebreak-style': [
-      'error',
-      'unix'
-    ],
-    quotes: [
-      'error',
-      'single'
-    ],
-    '@typescript-eslint/semi': [
-      'error',
-      'always'
-    ],
-    'max-len': [
-      'error', { code: 80 }
-    ]
-  }
+    // React
+    'react/prop-types': 0,
+    'react/self-closing-comp': 0,
+    'react/display-name': 0,
+
+    // JavaScript
+    semi: 0,
+    'no-proto': 0,
+    'no-unused-vars': 0,
+    'max-len': ['error', { code: 80 }],
+
+    // TypeScript
+    '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/camelcase': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/ban-types': 0,
+    '@typescript-eslint/semi': ['error'],
+  },
+  parser: '@typescript-eslint/parser',
+  plugins: [
+    '@typescript-eslint',
+  ],
 };
