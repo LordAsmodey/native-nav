@@ -1,13 +1,19 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Product } from '../../../types/Product';
+import { ProductInfo } from '../../../components/ProductInfo';
 
-export const ProductScreen: React.FC = (props) => {
-  // @ts-ignore
-  const { route } = props;
-  console.log(route);
+type Props = {
+  route: {
+    params: {
+      product: Product,
+    },
+  }
+};
+
+export const ProductScreen: React.FC<Props> = (props) => {
+  const { product } = props.route.params;
+
   return (
-    <View>
-      <Text>ProductScreen</Text>
-    </View>
+    <ProductInfo product={product} />
   );
 };

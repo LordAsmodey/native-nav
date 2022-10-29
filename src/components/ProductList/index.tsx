@@ -10,7 +10,7 @@ type Props = {
 
 export const ProductList: React.FC<Props> = (props) => {
   const { products } = props;
-  console.log(products);
+
   return (
     <SafeAreaView style={styles.container}>
       <FlatList

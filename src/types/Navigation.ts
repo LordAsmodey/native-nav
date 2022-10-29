@@ -4,14 +4,15 @@ import type {
 } from '@react-navigation/native';
 import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import type { StackNavigationProp } from '@react-navigation/stack';
+import { Product } from './Product';
 
 type StackParamList = {
-  ProductScreen: { productId: string }
+  ProductScreen: { product: Product }
 };
 
 type TabParamList = {
   MainScreen: NavigatorScreenParams<StackParamList>
-  ProductScreen: { productId: string }
+  ProductScreen: { product: Product }
 };
 
 export type ProfileScreenNavigationProp = CompositeNavigationProp<
