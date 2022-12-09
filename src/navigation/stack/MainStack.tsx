@@ -6,13 +6,14 @@ import { ProductScreen } from '../screens/ProductScreen';
 const Stack = createNativeStackNavigator();
 
 export const MainStack: React.FC = () => {
-  return (
+    return (
     <Stack.Navigator>
       <Stack.Screen
         name="MainScreen"
         component={MainScreen}
         options={{ headerShown: false }}
       />
+        {/* @ts-ignore*/}
       <Stack.Screen name="ProductScreen" component={ProductScreen}/>
     </Stack.Navigator>
   );

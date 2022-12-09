@@ -1,0 +1,3 @@
+export const LOAD_GOODS = 'LOAD_GOODS';
+export const LOAD_GOODS_SUCCESS = 'LOAD_GOODS_SUCCESS';
+export const LOAD_GOODS_FAILED = 'LOAD_GOODS_FAILED';
