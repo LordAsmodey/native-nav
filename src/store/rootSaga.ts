@@ -1,9 +1,10 @@
 import {all, call, spawn} from 'redux-saga/effects';
 import {rootGoodsSaga} from "./modules/Goods/sagas";
+import {rootAccountSaga} from "./modules/Account/sagas";
 
 export function* rootSaga() {
-  console.log('rootSagaStarted');
-  const sagas: any[] = [rootGoodsSaga];
+  const sagas: any[] = [rootGoodsSaga, rootAccountSaga];
+
   yield all([
     ...sagas.map(saga =>
       spawn(function* () {

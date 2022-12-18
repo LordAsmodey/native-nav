@@ -1,11 +1,11 @@
 import {Product} from "../../../../types/Product";
 import {LOAD_GOODS, LOAD_GOODS_FAILED, LOAD_GOODS_SUCCESS} from "../actions";
 
-export interface State {
+interface State {
   loading: boolean,
   error: string | null,
   goodsList: Product[],
-};
+}
 
 type Actions = ReturnType<any>;
 
@@ -36,10 +36,10 @@ export const goodsReducer = (state = INITIAL_STATE, action: Actions): State => {
       return {
         ...state,
         error: action.payload,
+        loading: false,
       };
     }
     default:
       return state;
   }
 };
-//
